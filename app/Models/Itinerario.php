@@ -1,0 +1,20 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Itinerario extends Model
+{
+    use HasFactory;
+
+    protected $table = 'Itinerario';
+    protected $primaryKey = 'idItinerario';
+
+    protected $fillable = [
+        'Fecha',
+        'Hora',
+        'idDispensador'
+    ];
+}
