@@ -20,8 +20,7 @@ class Dispensador extends Model
         'nivel_fuente_agua',
         'nivel_fuente_comida',
         'nivel_dep_agua',
-        'nivel_dep_comida',
-        'habitacion_id'
+        'nivel_dep_comida'
     ];
 
 }

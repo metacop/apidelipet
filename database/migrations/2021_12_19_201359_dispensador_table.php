@@ -15,7 +15,6 @@ class DispensadorTable extends Migration
     {
         Schema::create('dispensador', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('habitacion_id');
             $table->string('nombre',25);
             $table->string('IP');
             $table->string('MacAddress');
@@ -26,7 +25,6 @@ class DispensadorTable extends Migration
             $table->integer('estado');
             $table->timestamps();
 
-            $table->foreign('habitacion_id')->references('id')->on('habitacion');
         });
     }
 

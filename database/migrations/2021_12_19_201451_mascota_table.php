@@ -15,7 +15,6 @@ class MascotaTable extends Migration
     {
         Schema::create('mascota', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('raza_id');
             $table->unsignedInteger('users_id');
             $table->string('nombre');
             $table->string('sexo');
@@ -25,7 +24,7 @@ class MascotaTable extends Migration
             $table->date('fecha_nacimiento');
             $table->timestamps();
 
-            $table->foreign('raza_id')->references('id')->on('raza');
+         
             $table->foreign('users_id')->references('id')->on('users');
 
         });
