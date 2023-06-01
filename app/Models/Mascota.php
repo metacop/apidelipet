@@ -19,7 +19,6 @@ class Mascota extends Model
         'peso',
         'fecha_nacimiento',
         'imagen_mascota',
-        'raza_id',
         'users_id'
     ];
 

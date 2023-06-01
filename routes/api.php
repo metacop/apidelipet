@@ -29,11 +29,11 @@ Route::post('/userinfo', [AuthController::class, 'userinfo'])->middleware('auth:
 
 Route::apiResource('/dispensador', DispensadorController::class);
 
-Route::apiResource('/hogar', HogarController::class)->middleware('auth:sanctum');
+//Route::apiResource('/hogar', HogarController::class)->middleware('auth:sanctum');
 
-Route::apiResource('/habitacion', HabitacionController::class)->middleware('auth:sanctum');
+//Route::apiResource('/habitacion', HabitacionController::class)->middleware('auth:sanctum');
 
-Route::apiResource('/raza', RazaController::class);
+//Route::apiResource('/raza', RazaController::class);
 
 Route::apiResource('/mascota', MascotaController::class)->middleware('auth:sanctum');
 
