@@ -20,7 +20,7 @@ class MascotaTable extends Migration
             $table->string('sexo');
             $table->integer('altura');
             $table->integer('peso');
-            $table->string('imagen_mascota');
+            $table->string('imagen_mascota')->nullable();;
             $table->date('fecha_nacimiento');
             $table->timestamps();
 
