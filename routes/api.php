@@ -24,8 +24,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('/registro', [AuthController::class, 'registro']);
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/userinfo', [AuthController::class, 'userinfo'])->middleware('auth:sanctum');
-Route::apiResource('/mascota', MascotaController::class);
+Route::apiResource('/mascota', MascotaController::class)->middleware('auth:sanctum');
 Route::apiResource('/dispensador', DispensadorController::class)->middleware('auth:sanctum');
+
 
 
 //Route::apiResource('/hogar', HogarController::class)->middleware('auth:sanctum');
