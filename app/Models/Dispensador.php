@@ -9,7 +9,7 @@ class Dispensador extends Model
 {
     use HasFactory;
 
-    protected $table = 'Dispensador';
+    protected $table = 'dispensador';
     protected $primaryKey = 'idDispensador';
 
     protected $fillable = [

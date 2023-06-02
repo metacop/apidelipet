@@ -10,7 +10,7 @@ class Notificacion extends Model
 
     use HasFactory;
 
-    protected $table = 'Notificacion';
+    protected $table = 'notificacion';
     protected $primaryKey = 'idNotificacion';
 
     protected $fillable = [
