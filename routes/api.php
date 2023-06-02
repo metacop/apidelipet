@@ -27,7 +27,7 @@ Route::post('/userinfo', [AuthController::class, 'userinfo'])->middleware('auth:
 Route::apiResource('/mascota', MascotaController::class)->middleware('auth:sanctum');
 Route::apiResource('/dispensador', DispensadorController::class)->middleware('auth:sanctum');
 
-
+// asdas
 
 //Route::apiResource('/hogar', HogarController::class)->middleware('auth:sanctum');
 
