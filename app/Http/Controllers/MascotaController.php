@@ -36,7 +36,7 @@ class MascotaController extends Controller
             'altura' => 'required',
             'peso' => 'required',
             'fecha_nacimiento'=>'required',
-            'imagen_mascota' => 'required'
+            'imagen_mascota' => 'nullable'
         ]);
 
         $mascota = Mascota::create($request->all());
