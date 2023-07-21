@@ -51,13 +51,37 @@ class DispensadorController extends Controller
      * @param  \App\Models\Dispensador  $dispensador
      * @return \Illuminate\Http\Response
      */
-    public function show(Dispensador $dispensador)
+    public function show($id_usuario)
     {
+        $dispensador = Dispensador::find($id);
+
+        // Verificar si el dispensador existe
+        if (!$dispensador) {
+            return response()->json(['error' => 'Dispensador no encontrado'], 404);
+        }
+
         return response()->json([
             'dispensador'=>$dispensador,
             'mensaje'=>'ok'
         ]);
     }
+
+    public function dispensadoresDelUsuario($id_usuario)
+    {
+        $dispensadores = Dispensador::where('id_usuario', $id_usuario)->get();
+
+        // Verificar si se encontraron dispensadores
+        if ($dispensadores->isEmpty()) {
+            return response()->json(['error' => 'No se encontraron dispensadores'], 404);
+        }
+
+        return response()->json([
+            'dispensador'=>$dispensadores,
+            'mensaje'=>'ok'
+        ]);
+    }
+
+
 
     /**
      * Update the specified resource in storage.
