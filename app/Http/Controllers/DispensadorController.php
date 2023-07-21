@@ -51,9 +51,9 @@ class DispensadorController extends Controller
      * @param  \App\Models\Dispensador  $dispensador
      * @return \Illuminate\Http\Response
      */
-    public function show($id_usuario)
+    public function show($id_dispensador)
     {
-        $dispensador = Dispensador::find($id_usuario);
+        $dispensador = Dispensador::where('id',$id_dispensador)->first();
 
         // Verificar si el dispensador existe
         if (!$dispensador) {

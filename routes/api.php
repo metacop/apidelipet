@@ -26,7 +26,7 @@ Route::post('/login', [AuthController::class, 'login']);
 Route::post('/userinfo', [AuthController::class, 'userinfo'])->middleware('auth:sanctum');
 Route::apiResource('/mascota', MascotaController::class)->middleware('auth:sanctum');
 Route::apiResource('/dispensador', DispensadorController::class)->middleware('auth:sanctum');
-Route::get('/dispensador/{id_usuario}', 'DispensadorController@show')->where('id_usuario', '[0-9]+');
+Route::get('/dispensador/{id_dispensador}', 'DispensadorController@show')->where('id_dispensador', '[0-9]+');
 Route::get('/dispensadores/{id_usuario}', 'DispensadorController@dispensadoresDelUsuario')->where('id_usuario', '[0-9]+');
 // asdas
 
