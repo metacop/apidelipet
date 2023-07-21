@@ -53,7 +53,7 @@ class DispensadorController extends Controller
      */
     public function show($id_usuario)
     {
-        $dispensador = Dispensador::find($id);
+        $dispensador = Dispensador::find($id_usuario);
 
         // Verificar si el dispensador existe
         if (!$dispensador) {
