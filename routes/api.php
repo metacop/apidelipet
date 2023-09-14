@@ -26,7 +26,9 @@ Route::post('/login', [AuthController::class, 'login']);
 Route::post('/userinfo', [AuthController::class, 'userinfo'])->middleware('auth:sanctum');
 Route::apiResource('/mascota', MascotaController::class)->middleware('auth:sanctum');
 Route::apiResource('/dispensador', DispensadorController::class)->middleware('auth:sanctum');
+// show es una funcion por defecto de laravel asi es la sintaxis
 Route::get('/dispensador/{id_dispensador}', 'DispensadorController@show')->where('id_dispensador', '[0-9]+');
+// si quieres una funcion que no sea la default esta es la sintaxis
 Route::get('/dispensadores/{id_usuario}', [DispensadorController::class, 'dispensadoresDelUsuario'])->where('id_usuario', '[0-9]+');
 // asdas
 
