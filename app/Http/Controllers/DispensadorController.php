@@ -35,6 +35,8 @@ class DispensadorController extends Controller
             'MacAddress' => 'required',
             'nombre' => 'required|max:25|string',
             'estado' => 'required',
+            'id_usuario' => 'required',
+            'estado' => 'required'
         ]);
 
         $dispensador = Dispensador::create($request->all());

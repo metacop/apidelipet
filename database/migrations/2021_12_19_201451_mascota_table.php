@@ -18,16 +18,13 @@ class MascotaTable extends Migration
             $table->unsignedInteger('users_id');
             $table->string('nombre');
             $table->string('sexo');
-            $table->integer('altura');
             $table->integer('peso');
-            $table->string('imagen_mascota',255)->nullable();;
-            $table->date('fecha_nacimiento');
-            $table->timestamps();
-
-         
+            //$table->binary('imagen_mascota')->nullable()->change();                   
             $table->foreign('users_id')->references('id')->on('users');
-
+            $table->timestamps();
         });
+        	
+        DB::statement("ALTER TABLE mascota ADD imagen_mascota MEDIUMBLOB");
     }
 
     /**

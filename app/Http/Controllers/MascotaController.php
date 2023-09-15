@@ -33,10 +33,9 @@ class MascotaController extends Controller
         $request->validate([
             'nombre'=>'required|max:200|string',
             'sexo' => 'required|',
-            'altura' => 'required',
             'peso' => 'required',
-            'fecha_nacimiento'=>'required',
-            'imagen_mascota' => 'nullable'
+            'imagen_mascota' => 'nullable|',
+
         ]);
 
         $mascota = Mascota::create($request->all());
