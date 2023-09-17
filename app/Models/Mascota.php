@@ -17,6 +17,7 @@ class Mascota extends Model
         'sexo',
         'peso',
         'imagen_mascota'
+        'users_id'
     ];
 
 }
