@@ -13,7 +13,7 @@ class Dispensador extends Model
     protected $primaryKey = 'idDispensador';
 
     protected $fillable = [
-        'IP',
+         'IP',
         'MacAddress',
         'nombre',
         'nivel_fuente_agua',
