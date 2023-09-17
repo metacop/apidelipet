@@ -22,8 +22,9 @@ class DispensadorTable extends Migration
             $table->integer('nivel_fuente_comida');
             $table->integer('nivel_dep_agua');
             $table->integer('nivel_dep_comida');
-            $table->integer('id_usuario');
+            $table->unsignedInteger('id_usuario');
             $table->integer('estado');
+            $table->foreign('id_usuario')->references('id')->on('users');
             $table->timestamps();
 
         });
