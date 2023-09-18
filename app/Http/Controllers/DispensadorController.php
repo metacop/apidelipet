@@ -33,10 +33,7 @@ class DispensadorController extends Controller
         $request->validate([
             'IP' => 'required',
             'MacAddress' => 'required',
-            'nombre' => 'required|max:25|string',
-            'estado' => 'required',
-            'id_usuario' => 'required',
-            'estado' => 'required'
+            'nombre' => 'required|max:25|string'
         ]);
 
         $dispensador = Dispensador::create($request->all());

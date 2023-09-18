@@ -19,7 +19,9 @@ class Dispensador extends Model
         'nivel_fuente_agua',
         'nivel_fuente_comida',
         'nivel_dep_agua',
-        'nivel_dep_comida'
+        'nivel_dep_comida',
+        'id_usuario',
+        'estado'
     ];
 
 }
