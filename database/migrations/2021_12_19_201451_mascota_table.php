@@ -19,11 +19,13 @@ class MascotaTable extends Migration
             $table->string('nombre');
             $table->string('sexo');
             $table->integer('peso');
-            $table->string('imagen_mascota');
+            //$table->string('imagen_mascota');
             //$table->binary('imagen_mascota')->nullable()->change();                   
             $table->foreign('users_id')->references('id')->on('users');
             $table->timestamps();
         });
+        	
+        DB::statement("ALTER TABLE mascota ADD imagen_mascota VARCHAR(255)");
     }
 
     /**

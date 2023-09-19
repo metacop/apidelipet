@@ -33,8 +33,7 @@ class MascotaController extends Controller
         $request->validate([
             'nombre'=>'required|max:200|string',
             'sexo' => 'required|',
-            'peso' => 'required',
-            'imagen_mascota' => 'nullable|',
+            'peso' => 'required'
 
         ]);
 
